@@ -11,6 +11,7 @@ namespace Almacen.Web.Models
         public int ID { get; set; }
 
         [Required(ErrorMessage = "Debe proporcionar un nombre")]
+        [NombreValido(ErrorMessage = "El nombre {0} ya existe")]
         public string Nombre { get; set; }
 
         [StringLength(5, MinimumLength = 5, ErrorMessage = "El código postal debe ser de 5 caracteres")]
