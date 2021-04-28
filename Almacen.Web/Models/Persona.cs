@@ -23,5 +23,8 @@ namespace Almacen.Web.Models
         [Required(ErrorMessage = "El correo es requerido")]
         [RegularExpression(@".+\@.+\..+", ErrorMessage = "La dirección de correo debe ser válida")]
         public string Correo { get; set; }
+
+        [Required]
+        public string[] Habilidades { get; set; }
     }
 }
